@@ -8,13 +8,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    """Return a friendly HTTP greeting."""
+    
     # List of Integers
-    numbers = [12, 33, 44, 12,37,48,57,58]
+    numbers = [12, 33, 44, 17,37,48,57,58]
  
     #Sorting list of Integers
-    numbers.sort()
-    return "2nd largest number from the given list is "+ str(numbers[1])
+    numbers.sort(reverse=True)
+    return "Second largest number :"+ str(numbers[1])
 
 
 if __name__ == '__main__':
